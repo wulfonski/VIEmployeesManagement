@@ -4,6 +4,9 @@ package com.sda.dao;
 import com.sda.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.hql.internal.ast.util.SessionFactoryHelper;
+
+import java.util.List;
 
 public class GenericDao<T> {
 
@@ -25,6 +28,8 @@ public class GenericDao<T> {
         //session.close();
         return entity;
     }
+
+
 
     public T updateEntity(T entity){
         Session session = HibernateUtil.getSessionFactory().openSession();
