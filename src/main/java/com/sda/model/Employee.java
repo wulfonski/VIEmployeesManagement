@@ -1,13 +1,10 @@
 package com.sda.model;
 
 import org.hibernate.annotations.LazyToOne;
+import org.hibernate.annotations.ManyToAny;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -23,11 +20,12 @@ public class Employee {
     @Column(name = "name", length = 40)
     private String name;
 
-    @Column(name = "department_id")
-    private Long departmentId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name ="department_id", nullable=false)
+    private Department department;
 
     @Column(name = "hire_date" )
-    private Date hireDate;
+    private LocalDate hireDate;
 
     public Long getId() {
         return id;
@@ -45,19 +43,19 @@ public class Employee {
         this.name = name;
     }
 
-    public Date getHireDate() {
+    public LocalDate getHireDate() {
         return hireDate;
     }
 
-    public void setHireDate(Date hireDate) {
+    public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
     }
 
-    public Long getDepartmentId() {
-        return departmentId;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }
