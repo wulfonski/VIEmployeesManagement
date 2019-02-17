@@ -15,8 +15,14 @@
 
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
     <title>Login Page</title>
+    <link href="../css/login.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -26,9 +32,10 @@
     <input type="text" name="un"/><br>
 
     Please enter your password
-    <input type="text" name="pw"/>
+    <input type="password" name="pw"/>
 
     <input type="submit" value="submit">
 </form>
+
 </body>
 </html>
