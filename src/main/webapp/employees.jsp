@@ -26,5 +26,26 @@
 <%--<c:forEach items="${userService.findById(1)}" var="user">--%>
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
 <%--</c:forEach>--%>
+
+<table border="1" cellpadding="5">
+    <caption><h2>List of users</h2></caption>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <%--<th>Email</th>--%>
+        <%--<th>Profession</th>--%>
+    </tr>
+
+    <c:forEach var="employee" items="${employeeService.getAllEmployees()}">
+        <tr>
+            <td><c:out value="${employee.getId()}" /></td>
+            <td><c:out value="${employee.getName()}" /></td>
+            <%--<td><c:out value="${user.email}" /></td>--%>
+            <%--<td><c:out value="${user.profession}" /></td>--%>
+        </tr>
+
+    </c:forEach>
+
+</table>
 </body>
 </html>

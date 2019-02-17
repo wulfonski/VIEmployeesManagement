@@ -15,10 +15,9 @@ public class EmployeeDao extends GenericDao<Employee>{
     public List<Employee> getAllEmployees() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction transaction = session.beginTransaction();
-        List<Employee> employees  = (List<Employee>)session.createQuery("from com.sda.model.Employee").list();
-        transaction.commit();
-        Query query = session.createQuery("from Employee");
+        Query query = session.createQuery("from com.sda.model.Employee");
         List<Employee> allEmployees = query.getResultList();
+        transaction.commit();
         return allEmployees;
     }
 

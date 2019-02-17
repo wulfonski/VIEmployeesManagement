@@ -19,6 +19,7 @@ public class Employees extends HttpServlet {
     protected void doGet(HttpServletRequest reqest, HttpServletResponse response)
             throws ServletException, IOException {
         Employee employee = employeeDao.getEntityById(Employee.class, 1L);
+        Employee allEmployee = (Employee) employeeDao.getAllEmployees();
         response.getWriter().println("Hello World!");
     }
 }
