@@ -23,9 +23,9 @@
     <div class="header-right">
         <a class="active" href="home.jsp">Home</a>
         <a href= "employees.jsp">Employees</a>
-        <a href="#departments">Departments</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="departments.jsp">Departments</a>
+        <a href="contact.jsp">Contact</a>
+        <a href="about.jsp">About</a>
     </div>
 
 </div>
