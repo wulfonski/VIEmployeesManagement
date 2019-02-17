@@ -32,7 +32,8 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <%--<th>Email</th>--%>
+        <th>Hire date</th>
+        <th>Department</th>
         <%--<th>Profession</th>--%>
     </tr>
 
@@ -40,6 +41,8 @@
         <tr>
             <td><c:out value="${employee.getId()}" /></td>
             <td><c:out value="${employee.getName()}" /></td>
+            <%--<td><c:out value="${employee.getHireDate()}" /></td>--%>
+            <%--<td><c:out value="${employee.getDepartment()}" /></td>--%>
             <%--<td><c:out value="${user.email}" /></td>--%>
             <%--<td><c:out value="${user.profession}" /></td>--%>
         </tr>

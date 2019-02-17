@@ -25,7 +25,7 @@ public class Main {
         System.out.println("All clients are:");
 
         for(Employee employee: allEmployees){
-            System.out.print(employee.getName() + ", ");
+            System.out.print(employee.getName()+", ");
         }
 
 
