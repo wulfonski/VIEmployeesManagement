@@ -15,27 +15,21 @@
 
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1256">
     <title>Login Page</title>
-    <link href="../css/login.css" rel="stylesheet" type="text/css">
-
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <form action="login" method="post">
+    <body class="container login">
+    <div class="login">
+        <input type="text" placeholder="user name" name="un"><br>
+        <input type="password" placeholder="password" name="pw"/>
+        <input type="submit" value="Sign In">
+    </div>
+    <div class="shadow"></div>
 
-    Please enter your username
-    <input type="text" name="un"/><br>
-
-    Please enter your password
-    <input type="password" name="pw"/>
-
-    <input type="submit" value="submit">
 </form>
-
 </body>
 </html>
