@@ -15,11 +15,12 @@
 <html>
 <head>
     <title>Employees</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <jsp:include page="header.jsp"/>
 <body>
 <h1>Employees page!</h1>
-<span><c:out value="${employeeService.findById(1).getName()}"/></span>
+<%--<span><c:out value="${employeeService.findById(1).getName()}"/></span>--%>
 <%--<c:forEach items="${employeeService.findById(1)}" var="employee">--%>
     <%--<span><c:out value="${employee.getName()}"/></span>--%>
 <%--</c:forEach>--%>
@@ -28,19 +29,20 @@
 <%--</c:forEach>--%>
 
 <table border="1" cellpadding="5">
-    <caption><h2>List of users</h2></caption>
+    <caption><h2>List of employees</h2></caption>
     <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Hire date</th>
         <th>Department</th>
-        <%--<th>Profession</th>--%>
     </tr>
 
     <c:forEach var="employee" items="${employeeService.getAllEmployees()}">
         <tr>
             <td><c:out value="${employee.getId()}" /></td>
             <td><c:out value="${employee.getName()}" /></td>
+            <td><c:out value="${employee.getHireDate()}" /></td>
+            <td><c:out value="${employee.getDepartment().getName()}" /></td>
             <%--<td><c:out value="${employee.getHireDate()}" /></td>--%>
             <%--<td><c:out value="${employee.getDepartment()}" /></td>--%>
             <%--<td><c:out value="${user.email}" /></td>--%>
