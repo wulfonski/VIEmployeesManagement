@@ -52,5 +52,7 @@
     </c:forEach>
 
 </table>
+<button id="index" onClick="window.location='index.jsp';">Add Employee</button>
+</form>
 </body>
 </html>

@@ -17,4 +17,8 @@ public class EmployeeService {
     public List<Employee> getAllEmployees (){
         return employeeDao.getAllEmployees();
     }
+
+    public Employee insertEmployee (Employee employee){
+        return employee;
+    }
 }

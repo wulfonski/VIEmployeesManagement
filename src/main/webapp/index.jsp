@@ -7,6 +7,7 @@
 --%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
+<%@ page import ="java.util.Date"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <jsp:useBean id="employeeService" class="com.sda.service.EmployeeService"></jsp:useBean>
@@ -18,17 +19,14 @@
 <body>
 <left>
 
-<form action="login" method="post">
-    <body class="container login">
-    <div class="login">
-        <input type="text" placeholder="Employee Name" name="employeeName"><br>
-        <input type="text" placeholder="Department Name" name="departmentName"/>
-        <input type="datetime-local" placeholder="Hire Date" name="hireDate"/>
-        <input type="submit" value="Add New Employee">
-    </div>
-    <div class="shadow"></div>
-
+<form action="index.jsp" method="post">
+    <br><input type="text" placeholder="Employee Name" name="Employee Name"></br>
+    <br><input type="text" placeholder="Department ID" name="Department ID"/></br>
+    <br><input type="datetime-local" name="Hire Date"/></br>
+    <br><input type="reset" value="Clear" name ="clear"></br>
+    <br><input type="submit" value="Submit" name ="submit"></br>
 </form>
+
 
 </left>
 </body>
