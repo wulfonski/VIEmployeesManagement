@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class LoginServlet
+ * AddEmployees implementation class LoginServlet
  */
 @WebServlet(value = "/login")
 public class LoginServlet extends HttpServlet {

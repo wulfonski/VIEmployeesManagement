@@ -39,6 +39,6 @@ public class Employees extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("addEmployees.jsp");
     }
 }

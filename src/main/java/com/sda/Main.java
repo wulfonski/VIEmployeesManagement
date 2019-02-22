@@ -7,17 +7,19 @@ import com.sda.model.Department;
 import com.sda.model.Employee;
 import com.sda.model.User;
 import com.sda.service.EmployeeService;
+import com.sda.servlet.AddEmployees;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-//        User user = new User("admin", "admin");
-//        UserDao userDao = new UserDao();
-//        userDao.createEntity(user);
-//
+        User user = new User("admin", "admin");
+        UserDao userDao = new UserDao();
+        userDao.createEntity(user);
+
 //        Department department = new Department();
 //        department.setName("Audit");
 //        DepartmentDao departmentDao = new DepartmentDao();
@@ -83,6 +85,14 @@ public class Main {
 //        EmployeeDao employeeDao6 = new EmployeeDao();
 //        employeeDao6.createEntity(employee6);
 
+        EmployeeService service = new EmployeeService();
+        LocalDate date = LocalDate.now();
+        try {
+            service.insertEmployee("Monica G.",date , 2);
+            System.out.println("Worked");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 }

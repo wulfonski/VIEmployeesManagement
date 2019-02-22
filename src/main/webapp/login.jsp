@@ -28,6 +28,7 @@
         <input type="password" placeholder="password" name="pw"/>
         <input type="submit" value="Sign In">
     </div>
+    </body>
     <div class="shadow"></div>
 
 </form>

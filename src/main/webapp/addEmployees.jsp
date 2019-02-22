@@ -15,19 +15,22 @@
 <head>
     <title>Adding a new employee...</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<left>
 
-<form action="index.jsp" method="post">
-    <br><input type="text" placeholder="Employee Name" name="Employee Name"></br>
-    <br><input type="text" placeholder="Department ID" name="Department ID"/></br>
-    <br><input type="datetime-local" name="Hire Date"/></br>
+</head>
+<jsp:include page="header.jsp"/>
+
+<body>
+
+<form action="AddEmployees" method="POST">
+
+    <br><input type="text" placeholder="Employee Name" name="uname"></br>
+    <br><input type="number" placeholder="Department ID" name="depid"/></br>
+    <br><input type="datetime-local" name="hiredate"/></br>
     <br><input type="reset" value="Clear" name ="clear"></br>
-    <br><input type="submit" value="Submit" name ="submit"></br>
+    <br><input type="submit" value="submit" name ="submit"></br>
+
+
 </form>
 
-
-</left>
 </body>
 </html>

@@ -9,7 +9,6 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="../css/loginstyle.css" rel="stylesheet" type="text/css">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -26,6 +25,7 @@
         <a href="departments.jsp">Departments</a>
         <a href="contact.jsp">Contact</a>
         <a href="about.jsp">About</a>
+        <a href="addEmployees.jsp">Add employees</a>
     </div>
 
 </div>

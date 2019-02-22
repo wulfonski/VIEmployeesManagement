@@ -3,6 +3,9 @@ package com.sda.service;
 import com.sda.dao.EmployeeDao;
 import com.sda.model.Employee;
 
+import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class EmployeeService {
@@ -18,7 +21,7 @@ public class EmployeeService {
         return employeeDao.getAllEmployees();
     }
 
-    public Employee insertEmployee (Employee employee){
-        return employee;
+    public Employee insertEmployee(String name, LocalDate hireDate, int depID) throws SQLException {
+        return employeeDao.insertEmployee(name, hireDate, depID);
     }
 }
