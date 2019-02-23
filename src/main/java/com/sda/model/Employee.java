@@ -24,8 +24,8 @@ public class Employee {
     @JoinColumn(name ="department_id", nullable=false)
     private Department department;
 
-    @Column(name = "hire_date" )
-    private LocalDate hireDate;
+//    @Column(name = "hire_date" )
+//    private LocalDate hireDate;
 
     public Long getId() {
         return id;
@@ -51,11 +51,11 @@ public class Employee {
         this.department = department;
     }
 
-    public LocalDate getHireDate() {
-        return hireDate;
-    }
-
-    public void setHireDate(LocalDate hireDate) {
-        this.hireDate = hireDate;
-    }
+//    public LocalDate getHireDate() {
+//        return hireDate;
+//    }
+//
+//    public void setHireDate(LocalDate hireDate) {
+//        this.hireDate = hireDate;
+//    }
 }

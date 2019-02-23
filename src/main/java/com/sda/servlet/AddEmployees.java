@@ -17,24 +17,7 @@ public class AddEmployees extends HttpServlet {
 
     private EmployeeService employeeService = new EmployeeService();
 
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LocalDate date = LocalDate.parse(request.getParameter("hiredate"));
-        try {
-            Employee employee = employeeService.insertEmployee(request.getParameter("uname"),
-                    date,
-                    Integer.parseInt(request.getParameter("depid")));
 
-            if (employee != null) {
-                response.sendRedirect("addEmployees.jsp");
-            } else
-                response.sendRedirect("invalidEmployee.jsp"); //error page
-
-        } catch (SQLException e) {
-            System.out.println(e);
-        }
-
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

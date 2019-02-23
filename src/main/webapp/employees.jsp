@@ -33,7 +33,7 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Hire date</th>
+        <%--<th>Hire date</th>--%>
         <th>Department</th>
     </tr>
 
@@ -41,7 +41,7 @@
         <tr>
             <td><c:out value="${employee.getId()}" /></td>
             <td><c:out value="${employee.getName()}" /></td>
-            <td><c:out value="${employee.getHireDate()}" /></td>
+            <%--<td><c:out value="${employee.getHireDate()}" /></td>--%>
             <td><c:out value="${employee.getDepartment().getName()}" /></td>
             <%--<td><c:out value="${employee.getHireDate()}" /></td>--%>
             <%--<td><c:out value="${employee.getDepartment()}" /></td>--%>

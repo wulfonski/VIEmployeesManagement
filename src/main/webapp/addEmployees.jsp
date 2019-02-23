@@ -21,11 +21,11 @@
 
 <body>
 
-<form action="AddEmployees" method="POST">
+<form action="employees" method="POST">
 
     <br><input type="text" placeholder="Employee Name" name="uname"></br>
     <br><input type="number" placeholder="Department ID" name="depid"/></br>
-    <br><input type="datetime-local" name="hiredate"/></br>
+    <%--<br><input type="datetime-local" name="hiredate"/></br>--%>
     <br><input type="reset" value="Clear" name ="clear"></br>
     <br><input type="submit" value="submit" name ="submit"></br>
 

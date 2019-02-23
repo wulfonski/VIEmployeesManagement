@@ -3,6 +3,7 @@ package com.sda.servlet;
 import com.sda.dao.EmployeeDao;
 import com.sda.model.Employee;
 import com.sda.model.User;
+import com.sda.service.EmployeeService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,34 +12,26 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-//@WebServlet(value = "/employees")
-@WebServlet(value = "/addEmployee")
+@WebServlet(value = "/employees")
 public class Employees extends HttpServlet {
 
-    private EmployeeDao employeeDao = new EmployeeDao();
-
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        Employee employee = employeeDao.getEntityById(Employee.class, 1L);
-        Employee allEmployee = (Employee) employeeDao.getAllEmployees();
-        response.getWriter().println("Hello World!");
-    }
+    private EmployeeService employeeService = new EmployeeService();
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            String name = request.getParameter("name");
-            LocalDate hireDate = LocalDate.parse(request.getParameter("hireDate"));
-            Integer departmentID = Integer.valueOf(request.getParameter("departmentID"));
-            Employee employee = employeeDao.insertEmployee(name, hireDate, departmentID);
-            request.setAttribute("employee", employee);
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        LocalDate date = LocalDate.parse(request.getParameter("hiredate"));
+        Employee employee = new Employee();
+        employee.setName(request.getParameter("uname"));
+        request.getParameter("depid");
+        employee.setDepartment(request);
+        employeeService.insertEmployee(employee);
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        response.sendRedirect("addEmployees.jsp");
+        if (employee != null) {
+            response.sendRedirect("addEmployees.jsp");
+        } else
+            response.sendRedirect("invalidEmployee.jsp"); //error page
+
     }
+
+
 }

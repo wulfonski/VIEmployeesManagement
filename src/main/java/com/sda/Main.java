@@ -85,14 +85,14 @@ public class Main {
 //        EmployeeDao employeeDao6 = new EmployeeDao();
 //        employeeDao6.createEntity(employee6);
 
-        EmployeeService service = new EmployeeService();
-        LocalDate date = LocalDate.now();
-        try {
-            service.insertEmployee("Monica G.",date , 2);
-            System.out.println("Worked");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+//        EmployeeService service = new EmployeeService();
+//        LocalDate date = LocalDate.now();
+//        try {
+//            service.insertEmployee("Monica G.",date , 2);
+//            System.out.println("Worked");
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
 
     }
 }

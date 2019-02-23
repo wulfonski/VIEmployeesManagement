@@ -21,7 +21,7 @@ public class EmployeeService {
         return employeeDao.getAllEmployees();
     }
 
-    public Employee insertEmployee(String name, LocalDate hireDate, int depID) throws SQLException {
-        return employeeDao.insertEmployee(name, hireDate, depID);
+    public void insertEmployee(Employee employee) {
+        employeeDao.createEntity(employee);
     }
 }
