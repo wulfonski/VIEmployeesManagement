@@ -26,14 +26,20 @@
 
     <br><input type="text" placeholder="Employee Name" name="uname"></br>
     <%--<br><input type="text" placeholder="Department ID" name="depid"/></br>--%>
-    <%--&lt;%&ndash;<br><input type="datetime-local" name="hiredate"/></br>&ndash;%&gt;--%>
+    <br><input type="date" name="hiredate"/></br>
+    Choose the Manager:&nbsp;
+    <select name="managerid">
+        <c:forEach var="manager" items="${employeeService.getAllEmployees()}">
+            <option value="${manager.getId()}"> ${manager.getName()}</option>
+        </c:forEach>
+    </select></br>
+
     Select a Department:&nbsp;
     <select name="depid">
-        <%--<option <c:out value="${department.getId}">${department.getName}/> </option>--%>
         <c:forEach var="department" items="${departmentService.getAllDepartments()}">
             <option value="${department.getId()}"> ${department.getName()}</option>
         </c:forEach>
-    </select>
+    </select></br>
 
     <br><input type="reset" value="Clear" name="clear"></br>
     <br><input type="submit" value="submit" name="submit"></br>

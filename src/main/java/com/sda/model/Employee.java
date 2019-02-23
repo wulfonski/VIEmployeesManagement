@@ -6,6 +6,8 @@ import org.hibernate.annotations.ManyToAny;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name="employees")
@@ -24,8 +26,31 @@ public class Employee {
     @JoinColumn(name ="department_id", nullable=false)
     private Department department;
 
-//    @Column(name = "hire_date" )
-//    private LocalDate hireDate;
+    @Column(name = "hire_date" )
+    private LocalDate hireDate;
+
+    @ManyToOne(cascade={CascadeType.MERGE})
+    @JoinColumn(name="manager_id")
+    private Employee manager;
+
+    @OneToMany(mappedBy="manager")
+    private Set<Employee> subordinates = new HashSet<Employee>();
+
+    public Employee getManager() {
+        return manager;
+    }
+
+    public void setManager(Employee manager) {
+        this.manager = manager;
+    }
+
+    public Set<Employee> getSubordinates() {
+        return subordinates;
+    }
+
+    public void setSubordinates(Set<Employee> subordinates) {
+        this.subordinates = subordinates;
+    }
 
     public Long getId() {
         return id;
@@ -51,11 +76,11 @@ public class Employee {
         this.department = department;
     }
 
-//    public LocalDate getHireDate() {
-//        return hireDate;
-//    }
-//
-//    public void setHireDate(LocalDate hireDate) {
-//        this.hireDate = hireDate;
-//    }
+    public LocalDate getHireDate() {
+        return hireDate;
+    }
+
+    public void setHireDate(LocalDate hireDate) {
+        this.hireDate = hireDate;
+    }
 }
