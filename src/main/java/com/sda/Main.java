@@ -1,17 +1,7 @@
 package com.sda;
 
-import com.sda.dao.DepartmentDao;
-import com.sda.dao.EmployeeDao;
 import com.sda.dao.UserDao;
-import com.sda.model.Department;
-import com.sda.model.Employee;
 import com.sda.model.User;
-import com.sda.service.EmployeeService;
-import com.sda.servlet.AddEmployees;
-
-import java.sql.SQLException;
-import java.time.LocalDate;
-import java.util.List;
 
 public class Main {
 

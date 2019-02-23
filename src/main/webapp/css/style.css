@@ -195,13 +195,23 @@ body.login {
 }
 
 /*table*/
-th, td {
+.table_emp th, td {
     text-align: left;
     padding: 8px;
 }
-tr:nth-child(even){background-color: white}
-th {
+.table_emp tr:nth-child(even){background-color: white}
+.table_emp th {
     background-color: #99ccff;
+    color: black;
+}
+
+.table_dep th, td {
+    text-align: left;
+    padding: 8px;
+}
+.table_dep tr:nth-child(even){background-color: white}
+.table_dep th {
+    background-color: #edff50;
     color: black;
 }
 

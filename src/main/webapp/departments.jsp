@@ -19,7 +19,7 @@
 
 <body>
 <h1>Departments page!</h1>
-<table border="1" cellpadding="5">
+<table border="1" cellpadding="5" class="table_dep">
     <caption><h2>Departments List</h2></caption>
 
 <tr>

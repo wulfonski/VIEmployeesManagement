@@ -28,7 +28,7 @@
     <%--<span><c:out value="${employee.getUsername()}"/></span>--%>
 <%--</c:forEach>--%>
 
-<table border="1" cellpadding="5">
+<table border="1" cellpadding="5" class="table_emp">
     <caption><h2>List of employees</h2></caption>
     <tr>
         <th>ID</th>
