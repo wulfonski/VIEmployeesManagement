@@ -36,6 +36,9 @@ public class Employee {
     @OneToMany(mappedBy="manager")
     private Set<Employee> subordinates = new HashSet<Employee>();
 
+    @Column(name = "isDeleted", nullable = false, columnDefinition = "boolean default false")
+    private boolean isDeleted;
+
     public Employee getManager() {
         return manager;
     }
@@ -82,5 +85,13 @@ public class Employee {
 
     public void setHireDate(LocalDate hireDate) {
         this.hireDate = hireDate;
+    }
+
+    public boolean getIsDeleted() {
+        return isDeleted;
+    }
+
+    public void setIsDeleted(boolean deleted) {
+        isDeleted = deleted;
     }
 }

@@ -24,4 +24,9 @@ public class EmployeeService {
     public void insertEmployee(Employee employee) {
         employeeDao.createEntity(employee);
     }
+
+    public void deleteEmployee(Employee employee){
+        employee.setIsDeleted(true);
+        employeeDao.updateEntity(employee);
+    }
 }

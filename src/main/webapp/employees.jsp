@@ -49,8 +49,16 @@
             <td><c:out value="${employee.getManager().getName()}"/></td>
             <td><c:out value="${employee.getDepartment().getName()}"/></td>
             <td>
-                <button onClick="window.location='editEmployee.jsp';">Edit</button>
-                <button onclick="window.location='deleteEmployee.jsp';">Delete</button>
+            <td>
+                <form action="delete" method="POST">
+                    <input type="text" hidden="true" name="idEmp" value = "${employee.getId()}"/>
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Delete</button>
+                </form>
+            <td>
+                <form action="edit" method="POST">
+                    <input type="text" hidden="true" name="idEmp" value = "${employee.getId()}"/>
+                    <button type="submit" class="btn btn-primary btn-block btn-large">Edit</button>
+                </form>
             </td>
         </tr>
 
@@ -63,7 +71,6 @@
     </tr>
 
 </table>
-<button align="center" id="index" onClick="window.location='addEmployees.jsp';">Add Employee</button>
 </form>
 
 <script>
